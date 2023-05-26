@@ -1,1 +1,45 @@
 /* styles */
+
+body {
+    background-color: #000117;
+    color: aliceblue;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div {
+    border: red solid 1px;
+}
+.header {
+    flex: 0.5;
+    padding: 16px;
+}
+.main {
+    align-self: stretch;
+    display: flex;
+    padding: 16px;
+    margin: 0px 10vw;
+    justify-content: center;
+}
+
+.sidebar {
+    height: 600px;
+    flex: 0;
+    flex-basis: 300px;
+}
+.container {
+    height: 600px;
+    max-width: 600px;
+    min-width: 600px;
+    flex: 1;
+}
+
+.footer {
+    height: 30px;
+    border: red solid 1px;
+    flex-basis: content;
+}
