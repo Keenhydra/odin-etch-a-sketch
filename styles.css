@@ -11,35 +11,128 @@ body {
     align-items: center;
 }
 
-div {
-    border: red solid 1px;
-}
+
+
 .header {
     flex: 0.5;
     padding: 16px;
 }
 .main {
-    align-self: stretch;
     display: flex;
     padding: 16px;
-    margin: 0px 10vw;
-    justify-content: center;
+    margin: 0px auto;
+    justify-content: space-around;
+    width: fit-content;
 }
 
 .sidebar {
     height: 600px;
     flex: 0;
     flex-basis: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: 10px;
 }
+
 .container {
+    width: 600px;
     height: 600px;
     max-width: 600px;
-    min-width: 600px;
+    max-height: 600px;
+    padding: 5px;
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    align-content: stretch;
+    justify-content: flex-start;
 }
+
+.row {
+    background-color: #4e4e4e;
+    padding: 0px;
+    margin: 0px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    border-radius: 10%;
+    border-color: blue;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: flex-start;
+  }
+
+.block {
+    background-color: #4e4e4e;
+    padding: 0px;
+    margin: 0px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    border: blue solid 1px;
+}
+
+
+.block:hover {background-color: aqua;}
 
 .footer {
     height: 30px;
-    border: red solid 1px;
     flex-basis: content;
 }
+
+
+
+
+
+
+button {
+    border: aliceblue solid 0.5px;
+    height: 80px;
+    width: 80px;
+    border-radius: 40px;
+    background: #000117;
+    color: aliceblue;
+    cursor: pointer;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    border-radius: 16px;
+  }
+  
+  .slider:hover {
+    opacity: 1;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #04AA6D;
+    cursor: pointer;
+    border-radius: 16px;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #04AA6D;
+    cursor: pointer;
+   
+  }
+
+
+
+
+ 

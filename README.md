@@ -8,5 +8,6 @@ create inital layout in html/css
     create bar for buttons
 link java.js
 create loop function for creating divs 
+    >Get divs to stay in their box
 check if it works with different dimensions
 create .hover effect with opacity + 0.25 each time
