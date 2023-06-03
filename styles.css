@@ -1,7 +1,7 @@
 /* styles */
 
 body {
-    background-color: #000117;
+    background-color: #051C2C;
     color: aliceblue;
     width: 100vw;
     height: 100vh;
@@ -51,7 +51,7 @@ body {
 }
 
 .row {
-    background-color: #4e4e4e;
+    background-color: #201547;
     padding: 0px;
     margin: 0px;
     flex-grow: 1;
@@ -66,13 +66,13 @@ body {
   }
 
 .block {
-    background-color: #4e4e4e;
+    background-color: #201547;
     padding: 0px;
     margin: 0px;
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: auto;
-    border: blue solid 1px;
+    border-radius: 5%;
 }
 
 

@@ -7,11 +7,20 @@ const block = document.createElement('div')
 block.className = "block"
 row.className = "row"
 
-//number = 16;
+for (let i = 0; i < 16; i++){
+    const row = document.createElement('div');
+    row.className = `row ${i+1}`;
+    parent.appendChild(row);
+    for (let j = 0; j < 16; j++){
+        const block = document.createElement('div');
+        block.className = "block";
+        row.appendChild(block)
+    }
+}
 
 const slider = document.getElementById("gridSize");
-const output1 = document.getElementById("demo1");
-const output2 = document.getElementById("demo2")
+const output1 = document.getElementById("output1");
+const output2 = document.getElementById("output2")
 output1.innerHTML = slider.value;
 output2.innerHTML = slider.value;
 
@@ -29,10 +38,64 @@ slider.oninput = function() {
         parent.appendChild(row);
         for (let j = 0; j < number; j++){
             const block = document.createElement('div');
-            block.className = "block";
+            block.className = `block`;
             row.appendChild(block)
         }  
     } 
 }
 
+
+
+
+
+
+
+
+function black(e) {
+    this.style.backgroundColor = '#000';
+  }
+function eraser(e){
+    this.style.backgroundColor = '#201547'
+}
+
+
+function draw(){
+    const blocks = document.getElementsByClassName("block");
+    currentvalue = document.getElementById('draw').value;
+    if(currentvalue == "Off"){
+        document.getElementById("draw").value="On";
+        let blockArray = Array.from(blocks);
+        blockArray.forEach(element => {
+        element.addEventListener('mouseover', black)
+})
+    }else{
+        document.getElementById("draw").value="Off";
+        let blockArray = Array.from(blocks);
+        blockArray.forEach(element => {
+        element.removeEventListener('mouseover', black)
+})
+    }
+}
+
+function erase(){
+    const blocks = document.getElementsByClassName("block");
+    currentvalue = document.getElementById('erase').value;   
+    if(currentvalue == "Off"){
+        document.getElementById("erase").value="On";
+        let blockArray = Array.from(blocks);
+        blockArray.forEach(element => {
+        element.addEventListener('mouseover', eraser)
+})
+    }else{
+        document.getElementById("erase").value="Off";
+        let blockArray = Array.from(blocks);
+        blockArray.forEach(element => {
+        element.removeEventListener('mouseover', eraser)
+})
+    }
+}
+
+function reset(){
+    block.style.backgroundColor = '#201547'
+}
 

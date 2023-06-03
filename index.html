@@ -16,17 +16,17 @@
         <div class="sidebar">
             <div class="title"><h2>Controls!</h2></div>
             <div class="buttons">
-                <button id="draw">Draw!</button>
+                <button id="draw" type="button" value="Off" onclick="draw()">Draw!</button>
                 <button id="shade">Shade!</button>
                 <button id="rainbow">Rainbow!</button>
-                <button id="erase">Erase!</button>
-                <button id="reset">Reset!</button>
+                <button id="erase" type="button" value="Off" onclick="erase()">Erase!</button>
+                <button id="reset" type="button" onclick="reset()">Reset!</button>
                 <button id="show-grid">Show Grid!</button>
             </div>
             <div class="title"><h2>Grid size!</h2></div>
             <div id="gridselector">
                 <input type="range" min="8" max="64" value="16" step="4" class="slider" id="gridSize">
-                <p>Size <span id="demo1"></span> by <span id="demo2"></span></p>
+                <p>Size <span id="output1"></span> by <span id="output2"></span></p>
             </div>
         </div>
         <div class="container"></div>
