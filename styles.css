@@ -88,14 +88,26 @@ body {
 
 
 
-button {
-    border: aliceblue solid 0.5px;
+.button {
+    border: #59CBE8 solid 0.5px;
     height: 80px;
     width: 80px;
     border-radius: 40px;
     background: #000117;
-    color: aliceblue;
+    color: #59CBE8;
     cursor: pointer;
+}
+
+.button-on {
+    border: #59CBE8 solid 0.5px;
+    height: 80px;
+    width: 80px;
+    border-radius: 40px;
+    background: #000117;
+    color: #59CBE8;
+    cursor: pointer;
+    box-shadow: 0 0 15px 5px #48abe0;
+    text-shadow: #48abe0 0 0 10px;
 }
 
 .slider {
@@ -107,6 +119,7 @@ button {
     opacity: 0.7;
     -webkit-transition: .2s;
     transition: opacity .2s;
+    border-color: #59CBE8;
     border-radius: 16px;
   }
   
@@ -119,7 +132,7 @@ button {
     appearance: none;
     width: 25px;
     height: 25px;
-    background: #04AA6D;
+    background: #59CBE8;
     cursor: pointer;
     border-radius: 16px;
   }

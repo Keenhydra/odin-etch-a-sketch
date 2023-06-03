@@ -64,16 +64,19 @@ function draw(){
     currentvalue = document.getElementById('draw').value;
     if(currentvalue == "Off"){
         document.getElementById("draw").value="On";
+        document.getElementById("draw").className="button-on";
         let blockArray = Array.from(blocks);
         blockArray.forEach(element => {
-        element.addEventListener('mouseover', black)
-})
+            element.addEventListener('mouseover', black)
+        })
+        
     }else{
         document.getElementById("draw").value="Off";
+        document.getElementById("draw").className="button";
         let blockArray = Array.from(blocks);
         blockArray.forEach(element => {
-        element.removeEventListener('mouseover', black)
-})
+            element.removeEventListener('mouseover', black)
+        })
     }
 }
 
@@ -82,16 +85,18 @@ function erase(){
     currentvalue = document.getElementById('erase').value;   
     if(currentvalue == "Off"){
         document.getElementById("erase").value="On";
+        document.getElementById("erase").className="button-on";
         let blockArray = Array.from(blocks);
         blockArray.forEach(element => {
-        element.addEventListener('mouseover', eraser)
-})
+            element.addEventListener('mouseover', eraser)
+        })
     }else{
         document.getElementById("erase").value="Off";
+        document.getElementById("erase").className="button";
         let blockArray = Array.from(blocks);
         blockArray.forEach(element => {
-        element.removeEventListener('mouseover', eraser)
-})
+            element.removeEventListener('mouseover', eraser)
+        })
     }
 }
 
@@ -108,15 +113,17 @@ function showGrid(){
     currentvalue = document.getElementById('show-grid').value;   
     if(currentvalue == "Off"){
         document.getElementById("show-grid").value="On";
+        document.getElementById("show-grid").className="button-on";
         let blockArray = Array.from(blocks);
         blockArray.forEach(element => {
-            element.style.border = 'blue solid 1px';
-})
+            element.style.border = '#051C2C solid 0.1px';
+        })
     }else{
         document.getElementById("show-grid").value="Off";
+        document.getElementById("show-grid").className="button";
         let blockArray = Array.from(blocks);
         blockArray.forEach(element => {
-            element.style.border = 'blue solid 0px'
-})
+            element.style.border = '#051C2C solid 0px'
+        })
     }
 }
