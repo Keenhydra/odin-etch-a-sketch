@@ -102,3 +102,21 @@ function reset(){
         element.style.backgroundColor = '#201547'});
 }
 
+
+function showGrid(){
+    const blocks = document.getElementsByClassName("block");
+    currentvalue = document.getElementById('show-grid').value;   
+    if(currentvalue == "Off"){
+        document.getElementById("show-grid").value="On";
+        let blockArray = Array.from(blocks);
+        blockArray.forEach(element => {
+            element.style.border = 'blue solid 1px';
+})
+    }else{
+        document.getElementById("show-grid").value="Off";
+        let blockArray = Array.from(blocks);
+        blockArray.forEach(element => {
+            element.style.border = 'blue solid 0px'
+})
+    }
+}
