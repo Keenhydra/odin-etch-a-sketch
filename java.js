@@ -96,6 +96,9 @@ function erase(){
 }
 
 function reset(){
-    block.style.backgroundColor = '#201547'
+    const blocks = document.getElementsByClassName("block");
+    let blockArray = Array.from(blocks);
+    blockArray.forEach(element => {
+        element.style.backgroundColor = '#201547'});
 }
 
