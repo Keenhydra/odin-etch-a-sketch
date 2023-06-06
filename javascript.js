@@ -52,12 +52,11 @@ slider.oninput = function() {
 
 
 function black(e) {
-    this.style.backgroundColor = '#fff';
+    this.className = 'block-filled';
   }
 function eraser(e){
-    this.style.backgroundColor = '#201547'
+    this.className = 'block';
 }
-
 
 function draw(){
     const blocks = document.getElementsByClassName("block");
@@ -81,7 +80,7 @@ function draw(){
 }
 
 function erase(){
-    const blocks = document.getElementsByClassName("block");
+    const blocks = document.getElementsByClassName("block-filled");
     currentvalue = document.getElementById('erase').value;   
     if(currentvalue == "Off"){
         document.getElementById("erase").value="On";
@@ -101,12 +100,11 @@ function erase(){
 }
 
 function reset(){
-    const blocks = document.getElementsByClassName("block");
+    const blocks = document.getElementsByClassName("block-filled");
     let blockArray = Array.from(blocks);
     blockArray.forEach(element => {
-        element.style.backgroundColor = '#201547'});
+        element.className = 'block'});
 }
-
 
 function showGrid(){
     const blocks = document.getElementsByClassName("block");
@@ -116,7 +114,7 @@ function showGrid(){
         document.getElementById("show-grid").className="button-on";
         let blockArray = Array.from(blocks);
         blockArray.forEach(element => {
-            element.style.border = '#051C2C solid 0.1px';
+            element.style.border = 'grey solid 0.1px';
         })
     }else{
         document.getElementById("show-grid").value="Off";

@@ -131,8 +131,19 @@ p {
     border-radius: 5%;
 }
 
+.block-filled {
+    background-color: #fff;
+    padding: 0px;
+    margin: 0px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    border-radius: 5%;
+}
 
-.block:hover {background-color: aqua;}
+.block:hover, .block-filled:hover {
+    background-color: aqua;
+}
 
 .footer {
     height: 30px;
@@ -153,6 +164,7 @@ p {
     color: #59CBE8;
     cursor: pointer;
     transition: 0.1s;
+    margin: 3px;
 }
 
 .button-on {
@@ -166,6 +178,7 @@ p {
     box-shadow: 0 0 15px 5px #48abe0;
     text-shadow: #48abe0 0 0 10px;
     transition: 0.2s;
+    margin: 3px;
 }
 
 .button-nouse {
@@ -177,6 +190,7 @@ p {
     color: grey;
     cursor: pointer;
     transition: 0.1s;
+    margin: 3px;
 }
 
 .slider {
