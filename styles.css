@@ -152,6 +152,7 @@ p {
     background: #000117;
     color: #59CBE8;
     cursor: pointer;
+    transition: 0.1s;
 }
 
 .button-on {
@@ -164,6 +165,18 @@ p {
     cursor: pointer;
     box-shadow: 0 0 15px 5px #48abe0;
     text-shadow: #48abe0 0 0 10px;
+    transition: 0.2s;
+}
+
+.button-nouse {
+    border: grey solid 0.5px;
+    height: 80px;
+    width: 80px;
+    border-radius: 40px;
+    background: #000117;
+    color: grey;
+    cursor: pointer;
+    transition: 0.1s;
 }
 
 .slider {
@@ -182,6 +195,7 @@ p {
   .slider:hover {
     opacity: 1;
     box-shadow: 0 0 15px 5px #48abe0;
+    transition: 0.2s;
   }
   
   .slider::-webkit-slider-thumb {
