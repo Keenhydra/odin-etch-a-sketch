@@ -58,6 +58,10 @@ function eraser(e){
     this.className = 'block';
 }
 
+function rainbows(e){
+    this.className = 'block-rainbow';
+}
+
 function draw(){
     const blocks = document.getElementsByClassName("block");
     currentvalue = document.getElementById('draw').value;
@@ -95,6 +99,27 @@ function erase(){
         let blockArray = Array.from(blocks);
         blockArray.forEach(element => {
             element.removeEventListener('mouseover', eraser)
+        })
+    }
+}
+
+function rainbow(){
+    const blocks = document.getElementsByClassName("block");
+    currentvalue = document.getElementById('rainbow').value;
+    if(currentvalue == "Off"){
+        document.getElementById("rainbow").value="On";
+        document.getElementById("rainbow").className="button-on";
+        let blockArray = Array.from(blocks);
+        blockArray.forEach(element => {
+            element.addEventListener('mouseover', rainbows)
+        })
+        
+    }else{
+        document.getElementById("rainbow").value="Off";
+        document.getElementById("rainbow").className="button";
+        let blockArray = Array.from(blocks);
+        blockArray.forEach(element => {
+            element.removeEventListener('mouseover', rainbows)
         })
     }
 }
