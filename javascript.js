@@ -52,7 +52,7 @@ slider.oninput = function() {
 
 
 function black(e) {
-    this.style.backgroundColor = '#000';
+    this.style.backgroundColor = '#fff';
   }
 function eraser(e){
     this.style.backgroundColor = '#201547'
